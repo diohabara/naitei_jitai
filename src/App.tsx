@@ -37,7 +37,6 @@ export const App: React.FC = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
   } = useForm<Inputs>();
 
   const [subject, setSubject] = useState("件名");
