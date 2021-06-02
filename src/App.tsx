@@ -71,21 +71,23 @@ export const App: React.FC = () => {
         <input type="submit" />
       </form>
 
+      <h2>件名</h2>
       <div className="subject">
-        {subject}
+        <pre>{subject}</pre>
         <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
-          <div className="copyButton">
+          <span>
             <MdContentCopy />
-          </div>
+          </span>
         </CopyToClipboard>
       </div>
 
+      <h2>本文</h2>
       <div className="body">
-        {body}
+        <pre>{body}</pre>
         <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
-          <div className="copyButton">
+          <span>
             <MdContentCopy />
-          </div>
+          </span>
         </CopyToClipboard>
       </div>
     </>

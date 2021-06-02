@@ -22,6 +22,14 @@ h1 {
   border-bottom: 1px solid rgb(79, 89, 148);
 }
 
+h2 {
+  font-weight: 100;
+  color: white;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 89, 148);
+}
+
 .form {
   background: #0e101c;
   max-width: 400px;
@@ -96,13 +104,13 @@ input:disabled {
 
 .subject {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 100%;
   color: white;
 }
 .body {
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 100%;
   color: white;
 }
@@ -113,7 +121,7 @@ input:disabled {
   color: white;
 }
 
-span {
+/* span {
   display: block;
   text-align: right;
-}
+} */
