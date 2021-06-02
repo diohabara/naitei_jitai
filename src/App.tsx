@@ -2,8 +2,35 @@ import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useForm } from "react-hook-form";
 import { MdContentCopy } from "react-icons/md";
+import styled from "styled-components";
 import "./App.css";
 import { Inputs, UserForm } from "./components/UserForm";
+
+
+const JitaiSubject = styled.div`
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  color: white;
+`
+
+const JitaiBody = styled.div`
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  color: white;
+`
+
+const H2 = styled.h2`
+  font-weight: 400;
+  display: flex;
+  color: white;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 89, 148);
+`;
 
 export const App: React.FC = () => {
   const {
@@ -35,7 +62,7 @@ export const App: React.FC = () => {
 
   面接をご担当いただいた${recruiterName}様をはじめ、採用に関わってくださった皆さまには、心より感謝しております。
   最後になりますが、貴社の益々の発展を心よりお祈り申し上げます。
-  -----------------------
+
   ${userName}`);
     }
   );
@@ -47,31 +74,27 @@ export const App: React.FC = () => {
     watch("recruiterName")
   );
 
-  const Subject = 
-      <div className="subject">
-        {subject}
-        <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
-          <div className="copyButton">
-            <MdContentCopy />
-          </div>
-        </CopyToClipboard>
-      </div>
-
-  const Body =
-    <div className="body">
-      {body}
-      <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
-        <div className="copyButton">
-          <MdContentCopy />
-        </div>
-      </CopyToClipboard>
-    </div>
-
   return (
     <>
       <UserForm onSubmit={onSubmit} register={register} />
-      {Subject}
-      {Body}
+      <H2>件名</H2>
+      <JitaiSubject>
+        <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
+          <span>
+            <MdContentCopy />
+          </span>
+        </CopyToClipboard>
+        <pre>{subject}</pre>
+      </JitaiSubject>
+      <H2>本文</H2>
+      <JitaiBody>
+        <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
+          <span>
+            <MdContentCopy />
+          </span>
+        </CopyToClipboard>
+        <pre>{body}</pre>
+      </JitaiBody>
     </>
   );
 };

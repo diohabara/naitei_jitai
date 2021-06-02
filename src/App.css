@@ -28,14 +28,16 @@ input:disabled {
 }
 
 .subject {
+  display: flex;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 100%;
   color: white;
 }
 .body {
+  display: flex;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   width: 100%;
   color: white;
 }
@@ -47,6 +49,8 @@ input:disabled {
 }
 
 span {
-  display: block;
+  display: flex;
   text-align: right;
+  font-weight: 400;
+  padding: 5px;
 }
