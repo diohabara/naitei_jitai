@@ -33,11 +33,7 @@ const H2 = styled.h2`
 `;
 
 export const App: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-  } = useForm<Inputs>();
+  const { register, handleSubmit, watch } = useForm<Inputs>();
 
   const [subject, setSubject] = useState("件名");
   const [body, setBody] = useState("本文");
