@@ -47,12 +47,10 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.1.2",
     "@types/react-copy-to-clipboard": "^5.0.0",
     "autoprefixer": "^9.8.6",
     "gh-pages": "^3.2.0",
     "postcss": "^7.0.35",
-    "react-icons": "^4.2.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
+    "react-icons": "^4.2.0"
   }
 }

@@ -12,12 +12,7 @@ type Inputs = {
 };
 
 export const App: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<Inputs>();
+  const { register, handleSubmit, watch } = useForm<Inputs>();
 
   const [subject, setSubject] = useState("件名");
   const [body, setBody] = useState("本文");
