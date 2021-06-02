@@ -3,13 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useForm } from "react-hook-form";
 import { MdContentCopy } from "react-icons/md";
 import "./App.css";
-
-type Inputs = {
-  userName: string;
-  userUniversity: string;
-  company: string;
-  recruiterName: string;
-};
+import { Inputs, UserForm } from "./components/UserForm";
 
 export const App: React.FC = () => {
   const {
@@ -53,24 +47,7 @@ export const App: React.FC = () => {
     watch("recruiterName")
   );
 
-  return (
-    <>
-      <form onSubmit={onSubmit}>
-        <label>名前</label>
-        <input {...register("userName")} />
-
-        <label>大学名</label>
-        <input {...register("userUniversity")} />
-
-        <label>会社名</label>
-        <input {...register("company")} />
-
-        <label>採用担当者名</label>
-        <input {...register("recruiterName")} />
-
-        <input type="submit" />
-      </form>
-
+  const Subject = 
       <div className="subject">
         {subject}
         <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
@@ -80,14 +57,21 @@ export const App: React.FC = () => {
         </CopyToClipboard>
       </div>
 
-      <div className="body">
-        {body}
-        <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
-          <div className="copyButton">
-            <MdContentCopy />
-          </div>
-        </CopyToClipboard>
-      </div>
+  const Body =
+    <div className="body">
+      {body}
+      <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
+        <div className="copyButton">
+          <MdContentCopy />
+        </div>
+      </CopyToClipboard>
+    </div>
+
+  return (
+    <>
+      <UserForm onSubmit={onSubmit} register={register} />
+      {Subject}
+      {Body}
     </>
   );
 };
