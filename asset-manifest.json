@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/naitei_jitai/static/css/main.6846567f.chunk.css",
+    "main.js": "/naitei_jitai/static/js/main.6c4a5985.chunk.js",
+    "main.js.map": "/naitei_jitai/static/js/main.6c4a5985.chunk.js.map",
+    "runtime-main.js": "/naitei_jitai/static/js/runtime-main.cccce5ff.js",
+    "runtime-main.js.map": "/naitei_jitai/static/js/runtime-main.cccce5ff.js.map",
+    "static/js/2.b584675d.chunk.js": "/naitei_jitai/static/js/2.b584675d.chunk.js",
+    "static/js/2.b584675d.chunk.js.map": "/naitei_jitai/static/js/2.b584675d.chunk.js.map",
+    "static/js/3.26bb7088.chunk.js": "/naitei_jitai/static/js/3.26bb7088.chunk.js",
+    "static/js/3.26bb7088.chunk.js.map": "/naitei_jitai/static/js/3.26bb7088.chunk.js.map",
+    "index.html": "/naitei_jitai/index.html",
+    "static/css/main.6846567f.chunk.css.map": "/naitei_jitai/static/css/main.6846567f.chunk.css.map",
+    "static/js/2.b584675d.chunk.js.LICENSE.txt": "/naitei_jitai/static/js/2.b584675d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cccce5ff.js",
+    "static/js/2.b584675d.chunk.js",
+    "static/css/main.6846567f.chunk.css",
+    "static/js/main.6c4a5985.chunk.js"
+  ]
+}
