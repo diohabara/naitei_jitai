@@ -41,7 +41,7 @@ export const App: React.FC = () => {
 
   面接をご担当いただいた${recruiterName}様をはじめ、採用に関わってくださった皆さまには、心より感謝しております。
   最後になりますが、貴社の益々の発展を心よりお祈り申し上げます。
-  -----------------------
+
   ${userName}`);
     }
   );
@@ -73,22 +73,22 @@ export const App: React.FC = () => {
 
       <h2>件名</h2>
       <div className="subject">
-        <pre>{subject}</pre>
         <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
           <span>
             <MdContentCopy />
           </span>
         </CopyToClipboard>
+        <pre>{subject}</pre>
       </div>
 
       <h2>本文</h2>
       <div className="body">
-        <pre>{body}</pre>
         <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
           <span>
             <MdContentCopy />
           </span>
         </CopyToClipboard>
+        <pre>{body}</pre>
       </div>
     </>
   );

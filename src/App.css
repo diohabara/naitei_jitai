@@ -23,7 +23,8 @@ h1 {
 }
 
 h2 {
-  font-weight: 100;
+  font-weight: 400;
+  display: flex;
   color: white;
   text-align: left;
   padding-bottom: 10px;
@@ -34,15 +35,6 @@ h2 {
   background: #0e101c;
   max-width: 400px;
   margin: 0 auto;
-}
-
-p {
-  color: #bf1650;
-}
-
-p::before {
-  display: inline;
-  content: "♥";
 }
 
 input {
@@ -103,12 +95,14 @@ input:disabled {
 }
 
 .subject {
+  display: flex;
   margin: 0 auto;
   text-align: left;
   width: 100%;
   color: white;
 }
 .body {
+  display: flex;
   margin: 0 auto;
   text-align: left;
   width: 100%;
@@ -121,7 +115,9 @@ input:disabled {
   color: white;
 }
 
-/* span {
-  display: block;
+span {
+  display: flex;
   text-align: right;
-} */
+  font-weight: 400;
+  padding: 5px;
+}
