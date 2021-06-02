@@ -13,7 +13,7 @@ const JitaiSubject = styled.div`
   text-align: left;
   width: 100%;
   color: white;
-`
+`;
 
 const JitaiBody = styled.div`
   display: flex;
@@ -21,7 +21,14 @@ const JitaiBody = styled.div`
   text-align: left;
   width: 100%;
   color: white;
-`
+`;
+
+const Span = styled.span`
+  display: flex;
+  text-align: right;
+  font-weight: 400;
+  padding: 5px;
+`;
 
 const H2 = styled.h2`
   font-weight: 400;
@@ -75,18 +82,18 @@ export const App: React.FC = () => {
       <H2>件名</H2>
       <JitaiSubject>
         <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
-          <span>
+          <Span>
             <MdContentCopy />
-          </span>
+          </Span>
         </CopyToClipboard>
         <pre>{subject}</pre>
       </JitaiSubject>
       <H2>本文</H2>
       <JitaiBody>
         <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
-          <span>
+          <Span>
             <MdContentCopy />
-          </span>
+          </Span>
         </CopyToClipboard>
         <pre>{body}</pre>
       </JitaiBody>
