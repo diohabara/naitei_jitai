@@ -2,14 +2,42 @@ import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useForm } from "react-hook-form";
 import { MdContentCopy } from "react-icons/md";
+import styled from "styled-components";
 import "./App.css";
+import { Inputs, UserForm } from "./components/UserForm";
 
-type Inputs = {
-  userName: string;
-  userUniversity: string;
-  company: string;
-  recruiterName: string;
-};
+
+const JitaiSubject = styled.div`
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  color: white;
+`;
+
+const JitaiBody = styled.div`
+  display: flex;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  color: white;
+`;
+
+const Span = styled.span`
+  display: flex;
+  text-align: right;
+  font-weight: 400;
+  padding: 5px;
+`;
+
+const H2 = styled.h2`
+  font-weight: 400;
+  display: flex;
+  color: white;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(79, 89, 148);
+`;
 
 export const App: React.FC = () => {
   const { register, handleSubmit, watch } = useForm<Inputs>();
@@ -50,41 +78,25 @@ export const App: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <label>名前</label>
-        <input {...register("userName")} />
-
-        <label>大学名</label>
-        <input {...register("userUniversity")} />
-
-        <label>会社名</label>
-        <input {...register("company")} />
-
-        <label>採用担当者名</label>
-        <input {...register("recruiterName")} />
-
-        <input type="submit" />
-      </form>
-
-      <h2>件名</h2>
-      <div className="subject">
+      <UserForm onSubmit={onSubmit} register={register} />
+      <H2>件名</H2>
+      <JitaiSubject>
         <CopyToClipboard text={subject} onCopy={() => alert("Copied")}>
-          <span>
+          <Span>
             <MdContentCopy />
-          </span>
+          </Span>
         </CopyToClipboard>
         <pre>{subject}</pre>
-      </div>
-
-      <h2>本文</h2>
-      <div className="body">
+      </JitaiSubject>
+      <H2>本文</H2>
+      <JitaiBody>
         <CopyToClipboard text={body} onCopy={() => alert("Copied")}>
-          <span>
+          <Span>
             <MdContentCopy />
-          </span>
+          </Span>
         </CopyToClipboard>
         <pre>{body}</pre>
-      </div>
+      </JitaiBody>
     </>
   );
 };
