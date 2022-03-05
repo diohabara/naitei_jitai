@@ -39,6 +39,10 @@ const H2 = styled.h2`
   border-bottom: 1px solid rgb(79, 89, 148);
 `;
 
+const removeWhitespace = (str: string) => {
+  return str.replace(/\s/g, "");
+}
+
 export const App: React.FC = () => {
   const { register, handleSubmit, watch } = useForm<Inputs>();
 
@@ -47,12 +51,13 @@ export const App: React.FC = () => {
 
   const onSubmit = handleSubmit(
     ({ userName, userUniversity, company, recruiterName }) => {
-      setSubject(`内定辞退のご連絡 ${userUniversity} ${userName}`);
+      setSubject(`
+  内定辞退のご連絡 ${removeWhitespace(userUniversity)} ${removeWhitespace(userName)}`);
       setBody(`
-  ${company} 人事部
-  ${recruiterName}様
+  ${removeWhitespace(company)} 人事部
+  ${removeWhitespace(recruiterName)}様
 
-  お世話になっております。内定の通知をいただきました、${userName}です。
+  お世話になっております。内定の通知をいただきました、${removeWhitespace(userName)}です。
   メールにて失礼いたします。
 
   この度は内定のご連絡をいただき、誠にありがとうございました。
@@ -62,10 +67,10 @@ export const App: React.FC = () => {
 
   本来であれば貴社へお伺いし、直接お詫びをするべきところではございますが、メールでのご連絡となるところを、何卒ご容赦いただきたくお願い申し上げます。
 
-  面接をご担当いただいた${recruiterName}様をはじめ、採用に関わってくださった皆さまには、心より感謝しております。
+  面接をご担当いただいた${removeWhitespace(recruiterName)}様をはじめ、採用に関わってくださった皆さまには、心より感謝しております。
   最後になりますが、貴社の益々の発展を心よりお祈り申し上げます。
 
-  ${userName}`);
+  ${removeWhitespace(userName)}`);
     }
   );
 

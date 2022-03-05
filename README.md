@@ -7,12 +7,12 @@
 ## develop
 
 ```sh
-npm install
-npm start
+yarn install
+yarn run start
 ```
 
 ## deploy
 
 ```sh
-npm run deploy
+yarn run deploy
 ```
