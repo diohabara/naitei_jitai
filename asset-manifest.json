@@ -1,22 +1,15 @@
 {
-  "files": {
-    "main.css": "/naitei_jitai/static/css/main.cb66591d.chunk.css",
-    "main.js": "/naitei_jitai/static/js/main.f584b8e9.chunk.js",
-    "main.js.map": "/naitei_jitai/static/js/main.f584b8e9.chunk.js.map",
-    "runtime-main.js": "/naitei_jitai/static/js/runtime-main.cccce5ff.js",
-    "runtime-main.js.map": "/naitei_jitai/static/js/runtime-main.cccce5ff.js.map",
-    "static/js/2.b584675d.chunk.js": "/naitei_jitai/static/js/2.b584675d.chunk.js",
-    "static/js/2.b584675d.chunk.js.map": "/naitei_jitai/static/js/2.b584675d.chunk.js.map",
-    "static/js/3.26bb7088.chunk.js": "/naitei_jitai/static/js/3.26bb7088.chunk.js",
-    "static/js/3.26bb7088.chunk.js.map": "/naitei_jitai/static/js/3.26bb7088.chunk.js.map",
-    "index.html": "/naitei_jitai/index.html",
-    "static/css/main.cb66591d.chunk.css.map": "/naitei_jitai/static/css/main.cb66591d.chunk.css.map",
-    "static/js/2.b584675d.chunk.js.LICENSE.txt": "/naitei_jitai/static/js/2.b584675d.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.cccce5ff.js",
-    "static/js/2.b584675d.chunk.js",
-    "static/css/main.cb66591d.chunk.css",
-    "static/js/main.f584b8e9.chunk.js"
-  ]
+  "main.css": "/naitei_jitai/static/css/main.990e9552.chunk.css",
+  "main.js": "/naitei_jitai/static/js/main.3c93db75.chunk.js",
+  "main.js.map": "/naitei_jitai/static/js/main.3c93db75.chunk.js.map",
+  "runtime~main.js": "/naitei_jitai/static/js/runtime~main.d6edb46d.js",
+  "runtime~main.js.map": "/naitei_jitai/static/js/runtime~main.d6edb46d.js.map",
+  "static/js/2.d5a90baf.chunk.js": "/naitei_jitai/static/js/2.d5a90baf.chunk.js",
+  "static/js/2.d5a90baf.chunk.js.map": "/naitei_jitai/static/js/2.d5a90baf.chunk.js.map",
+  "static/js/3.81acc60e.chunk.js": "/naitei_jitai/static/js/3.81acc60e.chunk.js",
+  "static/js/3.81acc60e.chunk.js.map": "/naitei_jitai/static/js/3.81acc60e.chunk.js.map",
+  "index.html": "/naitei_jitai/index.html",
+  "precache-manifest.a24886d87a9bd0179b46b9662a3c72d2.js": "/naitei_jitai/precache-manifest.a24886d87a9bd0179b46b9662a3c72d2.js",
+  "service-worker.js": "/naitei_jitai/service-worker.js",
+  "static/css/main.990e9552.chunk.css.map": "/naitei_jitai/static/css/main.990e9552.chunk.css.map"
 }
